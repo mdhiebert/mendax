@@ -1,0 +1,16 @@
+Bandwidth and Sample Rate
+
+    Sample Rate: The sample rate (-s or --sample-rate option in hackrf_transfer) is the number of samples per second. This determines the bandwidth of the signal you are capturing.
+
+    For example, if you set the sample rate to 10 MHz (10,000,000 samples per second), you are capturing a bandwidth of 10 MHz around your center frequency. This bandwidth is symmetrically divided around the center frequency, giving you a range from (center frequency - 5 MHz) to (center frequency + 5 MHz).
+
+    Center Frequency: The center frequency (-f or --freq option in hackrf_transfer) is the central point of the frequency band you are capturing.
+
+Example
+
+If you set:
+
+    Center Frequency (-f): 100 MHz
+    Sample Rate (-s): 10 MHz
+
+Then, the bandwidth is 10 MHz, covering frequencies from 95 MHz to 105 MHz.

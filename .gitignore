@@ -3,6 +3,8 @@ data/tmp/*.bin
 data/hackrf_exps/*.csv
 data/hackrf_exps/*.bin
 
+logs/*.log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

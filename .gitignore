@@ -1,4 +1,5 @@
 data/tmp/*.csv
+data/tmp/*.bin
 data/hackrf_exps/*.csv
 data/hackrf_exps/*.bin
 

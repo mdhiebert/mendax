@@ -1,4 +1,5 @@
 import enum
+import os
 import time
 import logging
 from types import SimpleNamespace
@@ -24,6 +25,8 @@ class Mendax:
 
         self.state_parameters = SimpleNamespace(**kwargs) if kwargs else SimpleNamespace()
 
+        self._initialize_directories()
+
         # Default parameters
         self.should_live = True
         self.state_parameters.crash_buffer = ''
@@ -32,6 +35,13 @@ class Mendax:
         self.state_parameters.broadcast_forever = False if not hasattr(self.state_parameters, 'broadcast_forever') else self.state_parameters.broadcast_forever
 
         self.loop_interval = 0.5
+
+    def _initialize_directories(self):
+        if not os.path.exists('./data'):
+            os.mkdir('./data')
+        
+        if not os.path.exists('./data/tmp'):
+            os.mkdir('./data/tmp')
 
     def run(self):
         while self.should_live:
